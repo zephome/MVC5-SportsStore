@@ -10,5 +10,7 @@ namespace SportsStore.WebUI.Abstract
     public interface IProductRepository
     {
         IEnumerable<Product> Produts { get; set; }
+
+        IEnumerable<Product> ProductsItem { get; set; }
     }
 }
