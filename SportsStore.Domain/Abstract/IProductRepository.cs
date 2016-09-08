@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportsStore.WebUI.Abstract
+namespace SportsStore.Domain.Abstract
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> Produts { get; set; }
+        IEnumerable<Product> Products { get; }
 
-        IEnumerable<Product> ProductsItem { get; set; }
+        IEnumerable<Product> ProductsItem { get; }
     }
 }

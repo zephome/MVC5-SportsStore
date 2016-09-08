@@ -4,10 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">SPORTS STORE</a>
+    </div>
+
+    <div class="row panel">
+        <div id="category" class="col-xs-3">
+            Put something useful here later
+        </div>
+
+        <div class="col-xs-8">
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>
