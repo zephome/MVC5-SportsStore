@@ -34,6 +34,11 @@ namespace SportsStore.WebUI.Controllers
             return PartialView(cart);
         }
 
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
+        }
+
         public RedirectToRouteResult AddToCart(Cart cart, int productId, string returnUrl)
         {
             Product product = repository.Products
