@@ -14,7 +14,7 @@ namespace SportsStore.Domain.Concrete
     {
         public string MailToAddress = "orders@example.com";
         public string MailFromAddress = "sportssotre@example.com";
-        public bool UseSsl = true;
+        public bool UseSsl = false;
         public string Username = "MySmtpUsername";
         public string Password = "MySmtpPassword";
         public string ServerName = "smtp.example.com";
@@ -60,6 +60,7 @@ namespace SportsStore.Domain.Concrete
 
                     body.AppendFormat("{0} x {1} (subtotal: {2:c}",
                                         line.Quantity,
+                                        line.Product.Name,
                                         subtotal);
                 }
 
