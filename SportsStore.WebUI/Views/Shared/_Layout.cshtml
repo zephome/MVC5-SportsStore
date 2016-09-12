@@ -7,16 +7,28 @@
 
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <link rel="stylesheet" href="~/Content/ErrorStyles.css" />
+
+    <style>
+        .navbar-right {
+            float: right !important;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse" role="navigation">
-        <a class="navbar-brand" href="#">SPORTS STORE</a>
+        <a class="navbar-brand" href="#">
+            <span class="hidden-xs">SPORTS STORE</span>
+            <span class="visible-xs">SPORTS</span>
+            <span class="visible-xs">STORE</span>
+        </a>
         @Html.Action("Summary", "Cart")
     </div>
 
     <div class="row panel">
         <div id="category" class="col-xs-3">
-            @Html.Action("Menu", "Nav")
+            @Html.Action("Menu", "Nav", new { horizontalLayout = true })
         </div>
 
         <div class="col-xs-8">
